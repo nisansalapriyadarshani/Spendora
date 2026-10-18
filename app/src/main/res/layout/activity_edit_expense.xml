@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:padding="20dp"
+    tools:context=".EditExpenseActivity">
+
+    <!-- Screen Title -->
+    <TextView
+        android:id="@+id/tvEditTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Expense"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:gravity="center"
+        android:layout_marginTop="15dp"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvEditSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEditTitle"
+        android:text="Update or remove your expense"
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Expense Name Label -->
+    <TextView
+        android:id="@+id/tvEditNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEditSubtitle"
+        android:layout_marginTop="30dp"
+        android:text="Expense Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Expense Name Input -->
+    <EditText
+        android:id="@+id/etEditExpenseName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvEditNameLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter expense name"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:backgroundTint="#2563EB"/>
+
+    <!-- Amount Label -->
+    <TextView
+        android:id="@+id/tvEditAmountLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEditExpenseName"
+        android:layout_marginTop="20dp"
+        android:text="Amount (Rs.)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Amount Input -->
+    <EditText
+        android:id="@+id/etEditAmount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvEditAmountLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:backgroundTint="#2563EB"/>
+
+    <!-- Category Label -->
+    <TextView
+        android:id="@+id/tvEditCategoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEditAmount"
+        android:layout_marginTop="20dp"
+        android:text="Expense Category"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Category Spinner -->
+    <Spinner
+        android:id="@+id/spEditCategory"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvEditCategoryLabel"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+
+    <!-- Expense Type Label -->
+    <TextView
+        android:id="@+id/tvEditTypeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spEditCategory"
+        android:layout_marginTop="20dp"
+        android:text="Expense Type"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Radio Group -->
+    <RadioGroup
+        android:id="@+id/rgEditExpenseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEditTypeLabel"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbEditNeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need"
+            android:buttonTint="#2563EB"/>
+
+        <RadioButton
+            android:id="@+id/rbEditWant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want"
+            android:layout_marginStart="30dp"
+            android:buttonTint="#2563EB"/>
+
+    </RadioGroup>
+
+    <!-- Essential CheckBox -->
+    <CheckBox
+        android:id="@+id/cbEditEssential"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgEditExpenseType"
+        android:layout_marginTop="15dp"
+        android:text="Mark as Essential Expense"
+        android:textSize="15sp"
+        android:buttonTint="#2563EB"/>
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/btnUpdateExpense"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cbEditEssential"
+        android:layout_marginTop="25dp"
+        android:text="Update Expense"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2563EB"/>
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/btnDeleteExpense"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnUpdateExpense"
+        android:layout_marginTop="10dp"
+        android:text="Delete Expense"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#EF4444"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnEditBack"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnDeleteExpense"
+        android:layout_marginTop="10dp"
+        android:text="Back to Expenses"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:backgroundTint="#DBEAFE"/>
+
+</RelativeLayout>

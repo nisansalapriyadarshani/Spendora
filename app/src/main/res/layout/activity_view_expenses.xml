@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:padding="20dp"
+    tools:context=".ViewExpensesActivity">
+
+    <!-- Screen Title -->
+    <TextView
+        android:id="@+id/tvViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Expenses"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:gravity="center"
+        android:layout_marginTop="15dp"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvViewSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvViewTitle"
+        android:text="Track and manage your spending"
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Total Expenses -->
+    <TextView
+        android:id="@+id/tvListTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvViewSubtitle"
+        android:layout_marginTop="25dp"
+        android:text="Total Spending: Rs. 0.00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:gravity="center"/>
+
+    <!-- Expense List -->
+    <ListView
+        android:id="@+id/listExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvListTotal"
+        android:layout_above="@id/btnViewBack"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:divider="#DBEAFE"
+        android:dividerHeight="1dp"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnViewBack"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:text="Back to Home"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2563EB"/>
+
+</RelativeLayout>

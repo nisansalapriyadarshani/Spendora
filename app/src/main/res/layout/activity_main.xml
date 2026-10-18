@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spendora"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:gravity="center"
+        android:layout_marginTop="35dp"/>
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/tvTagline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAppName"
+        android:text="Track Smart. Spend Better."
+        android:textSize="15sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTagline"
+        android:text="Welcome Back!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginTop="45dp"/>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWelcome"
+        android:text="Manage your daily expenses easily."
+        android:textSize="15sp"
+        android:textColor="#64748B"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Total Expenses Card -->
+    <LinearLayout
+        android:id="@+id/totalCard"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/tvDescription"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#2563EB"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Expenses"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tvTotalExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 0.00"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <!-- Transactions Card -->
+    <LinearLayout
+        android:id="@+id/transactionCard"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/totalCard"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Transactions"
+            android:textSize="16sp"
+            android:textColor="#64748B"/>
+
+        <TextView
+            android:id="@+id/tvTotalTransactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2563EB"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Add Expense Button -->
+    <Button
+        android:id="@+id/btnAddExpense"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/transactionCard"
+        android:layout_marginTop="35dp"
+        android:text="Add Expense"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2563EB"/>
+
+    <!-- View Expenses Button -->
+    <Button
+        android:id="@+id/btnViewExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/btnAddExpense"
+        android:layout_marginTop="15dp"
+        android:text="View Expenses"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:backgroundTint="#DBEAFE"/>
+
+</RelativeLayout>
+</RelativeLayout>

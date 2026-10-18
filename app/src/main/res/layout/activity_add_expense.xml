@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:padding="20dp"
+    tools:context=".AddExpenseActivity">
+
+    <!-- Screen Title -->
+    <TextView
+        android:id="@+id/tvAddTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Expense"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvAddSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAddTitle"
+        android:text="Keep track of your daily spending"
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <!-- Expense Name Label -->
+    <TextView
+        android:id="@+id/tvExpenseNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAddSubtitle"
+        android:layout_marginTop="25dp"
+        android:text="Expense Name"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Expense Name Input -->
+    <EditText
+        android:id="@+id/etExpenseName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/tvExpenseNameLabel"
+        android:layout_marginTop="5dp"
+        android:hint="Enter expense name"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:backgroundTint="#2563EB"/>
+
+    <!-- Amount Label -->
+    <TextView
+        android:id="@+id/tvAmountLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etExpenseName"
+        android:layout_marginTop="15dp"
+        android:text="Amount (Rs.)"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Amount Input -->
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/tvAmountLabel"
+        android:layout_marginTop="5dp"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:backgroundTint="#2563EB"/>
+
+    <!-- Category Label -->
+    <TextView
+        android:id="@+id/tvCategoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAmount"
+        android:layout_marginTop="15dp"
+        android:text="Expense Category"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Category Spinner -->
+    <Spinner
+        android:id="@+id/spCategory"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/tvCategoryLabel"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"/>
+
+    <!-- Expense Type Label -->
+    <TextView
+        android:id="@+id/tvTypeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spCategory"
+        android:layout_marginTop="15dp"
+        android:text="Expense Type"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"/>
+
+    <!-- Radio Group -->
+    <RadioGroup
+        android:id="@+id/rgExpenseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTypeLabel"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbNeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need"
+            android:checked="true"
+            android:buttonTint="#2563EB"/>
+
+        <RadioButton
+            android:id="@+id/rbWant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want"
+            android:layout_marginStart="30dp"
+            android:buttonTint="#2563EB"/>
+
+    </RadioGroup>
+
+    <!-- Essential CheckBox -->
+    <CheckBox
+        android:id="@+id/cbEssential"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgExpenseType"
+        android:layout_marginTop="10dp"
+        android:text="Mark as Essential Expense"
+        android:textSize="14sp"
+        android:buttonTint="#2563EB"/>
+
+    <!-- Save Expense Button -->
+    <Button
+        android:id="@+id/btnSaveExpense"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cbEssential"
+        android:layout_marginTop="20dp"
+        android:text="Save Expense"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2563EB"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnSaveExpense"
+        android:layout_marginTop="10dp"
+        android:text="Back to Home"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:backgroundTint="#DBEAFE"/>
+
+</RelativeLayout>
